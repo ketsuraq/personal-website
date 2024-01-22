@@ -414,13 +414,13 @@ animation: gradientLoop 10s linear infinite;
 }
 .about-title-header {
     padding-right: 30px;
-    font-size: 4em;
+    font-size: max(3rem, 2.5vw);
     background: var(--gradient);
     width: fit-content;
     font-weight: bold
 }
 .about-title-subtext {
-    font-size: 2rem;
+    font-size: max(1.6rem, 1.5vw);
 }
 
 .about-languages-box {
@@ -435,7 +435,7 @@ animation: gradientLoop 10s linear infinite;
     gap: 2rem;
 }
 .about-languages-title {
-    font-size: 2em;
+    font-size: max(35px, 1.5vw);
     font-weight: bold;
 }
 .about-languages {
@@ -449,12 +449,51 @@ animation: gradientLoop 10s linear infinite;
 }
 .about-language-header {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: max(25px, 1.3vw);;
 }
 .about-language-subtext {
-    font-size: 1.1rem;
+    font-size: max(20px, 1vw);
 }
 
+.about-education-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 18vh;
+    left: calc(5% + clamp(300px, 50%, 800px) + 5%);
+    gap: 2rem;
+    border: 2px solid white;
+    box-sizing: border-box;
+    padding: 2rem;;
+}
+.about-education img {
+    text-align: start;
+    width: 2rem;
+    filter: invert(100%);
+    object-fit: contain;
+}
+.about-education-title {
+    font-size: max(35px, 1.5vw);
+    font-weight: bold;
+}
+.about-education {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.image-and-header {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 1rem;
+}
+.education-header {
+    font-size: max(25px, 1.3vw);;
+    font-weight: bold;
+}
+.education-subtext {
+    font-size: max(20px, 1vw);
+}
 
 /* FOOTER */
 
@@ -469,7 +508,7 @@ animation: gradientLoop 10s linear infinite;
 .footer-text {
     padding: 10px;
     font-style: italic;
-    font-size: 1.3em;
+    font-size: max(1.4rem, 1.2vw);;
 }
 .footer-text  a {
     text-decoration: none;
