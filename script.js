@@ -22,17 +22,10 @@ function handleScrollDown() {
 }
 window.addEventListener('scroll', handleScrollDown);
 
-/*
-window.addEventListener('scroll', handleScrollUp);
-
-function handleScrollUp() {
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition > 1) {
-        mainPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        window.removeEventListener('scroll', handleScrollUp);
-        DelayNode(1)
-        window.addEventListener('scroll', handleScrollDown);
-    }
+const height = window.innerHeight;
+const width = window.innerWidth;
+const overlay = document.querySelector('.overlay');
+if (height < 800 || width < 800) {
+    overlay.style.opacity = '1';
+    overlay.style.zIndex = '1000000';
 }
-*/
